@@ -1,0 +1,71 @@
+<html>
+
+    <head>
+        
+
+        <style>
+            #firstdice,
+            #seconddice{
+                width: 50%;
+                border: 1px solid #fff;
+                background-color: #000;
+                
+                color: #fff;
+                padding: 50px;
+                font-size: 30px;
+            }
+            .cover{
+                display: flex;
+            }
+        </style>
+
+
+
+
+        
+    </head>
+
+    <body>
+        <h1>
+            Same Number In Dice You Won One More Chance
+        </h1>
+        <div class="cover">
+
+            
+            <br/>
+            <br/>
+        <div id="firstdice">0</div>
+        <img src="3d-rendering-dices-illustration_52683-75998.webp" width='30%' />
+        <div id="seconddice">0</div>
+        </div>
+
+        <br/>
+        <br/>
+        <button onmousedown="diceroll()" >Roll Dice </button>
+        <h1 id="result"></h1>
+    </body>
+    <script>
+        function diceroll(){
+            var firstdice1 = document.getElementById("firstdice");
+            var seconddice2 = document.getElementById("seconddice");
+            var result = document.getElementById("result");
+            var dice1 = Math.floor(Math.random() * 6) + 1;
+            var dice2 = Math.floor(Math.random() * 6) + 1;
+            var diceTotal = dice1 + dice2;
+            firstdice1.innerHTML = dice1;
+            seconddice2.innerHTML = dice2;
+            result.innerHTML = "You Rolled  " + diceTotal+".";
+            if(dice1 == dice2){
+                result.innerHTML += "You Won! One More Chance ";
+            }
+        }
+    </script>
+
+</html>
+
+
+
+
+
+
+
